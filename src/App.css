@@ -214,11 +214,12 @@
 main > section[id] { scroll-margin-top:79px; }
 #services.section { padding:72px 0 84px; }
 #services .split-heading { margin-bottom:46px; }
-#services .section-kicker { margin:3px 0 0; color:var(--ink); font-size:18px; font-weight:700; letter-spacing:-.035em; line-height:1.15; }
+#services .section-kicker { display:flex; align-items:center; gap:11px; margin:3px 0 0; color:var(--ink); font-size:12px; font-weight:800; letter-spacing:.09em; line-height:1.15; text-transform:uppercase; }
+#services .section-kicker span { display:inline-grid; width:29px; height:29px; place-items:center; border:1px solid #a8c1ff; border-radius:50%; color:var(--blue); font-size:10px; letter-spacing:0; }
 @media(max-width:620px) {
   #services.section { padding:58px 0 66px; }
   #services .split-heading { margin-bottom:34px; }
-  #services .section-kicker { margin:0 0 12px; font-size:17px; }
+  #services .section-kicker { margin:0 0 14px; font-size:11px; }
 }
 
 /* A proper proof-section introduction replaces the generic numbers label. */
