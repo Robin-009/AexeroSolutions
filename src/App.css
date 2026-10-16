@@ -214,9 +214,11 @@
 main > section[id] { scroll-margin-top:79px; }
 #services.section { padding:72px 0 84px; }
 #services .split-heading { margin-bottom:46px; }
+#services .section-kicker { margin:3px 0 0; color:var(--ink); font-size:18px; font-weight:700; letter-spacing:-.035em; line-height:1.15; }
 @media(max-width:620px) {
   #services.section { padding:58px 0 66px; }
   #services .split-heading { margin-bottom:34px; }
+  #services .section-kicker { margin:0 0 12px; font-size:17px; }
 }
 
 /* A proper proof-section introduction replaces the generic numbers label. */
