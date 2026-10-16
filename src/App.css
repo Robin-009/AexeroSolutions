@@ -105,7 +105,7 @@
 .hero-actions a[href="#work"] b { font-size:13px; }
 
 /* Compact editorial proof strip — deliberately quiet, not a dashboard. */
-#work.section { padding:42px 0 40px; background:#fff; }
+#work.section { padding:42px 0 18px; background:#fff; }
 #work .section-label { margin-bottom:19px; }
 #work .section-label .text-link::after { content:'Start a conversation →'; color:#246bff; font-size:12px; letter-spacing:.01em; }
 #work .work-grid { max-width:100%; border-color:#dde5ef; }
@@ -229,8 +229,13 @@ main > section[id] { scroll-margin-top:79px; }
 #work .proof-heading > div:last-child { max-width:325px; justify-self:end; }
 #work .proof-heading > div:last-child p { margin:0 0 19px; color:var(--muted); font-size:14px; line-height:1.55; }
 #work .proof-heading .text-link { color:#173a82; }
+
+/* Let the proof section lead directly into the investment conversation. */
+#pricing.section { padding-top:68px; }
+#pricing .pricing-intro { margin-bottom:38px; }
 @media(max-width:720px) {
-  #work.section { padding:42px 0; }
+  #work.section { padding:42px 0 20px; }
   #work .proof-heading { grid-template-columns:1fr; gap:20px; margin-bottom:24px; }
   #work .proof-heading > div:last-child { max-width:100%; justify-self:start; }
+  #pricing.section { padding-top:56px; }
 }
