@@ -209,3 +209,12 @@
 .contact-form { border:1px solid #d7e6fc; box-shadow:0 22px 43px #1557a528; }
 .footer-inner { padding:32px 0; }
 @media(max-width:620px) { .ticker { margin-top:33px; } .mark strong { font-size:16px; } }
+
+/* Keep section landings and vertical rhythm intentional beneath the fixed header. */
+main > section[id] { scroll-margin-top:79px; }
+#services.section { padding:72px 0 84px; }
+#services .split-heading { margin-bottom:46px; }
+@media(max-width:620px) {
+  #services.section { padding:58px 0 66px; }
+  #services .split-heading { margin-bottom:34px; }
+}
