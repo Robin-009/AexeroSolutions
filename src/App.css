@@ -210,6 +210,13 @@
 .footer-inner { padding:32px 0; }
 @media(max-width:620px) { .ticker { margin-top:33px; } .mark strong { font-size:16px; } }
 
+/* Clear, accessible LinkedIn call-to-action in the footer. */
+.footer-inner .linkedin-link { display:inline-flex; align-items:center; gap:8px; padding:10px 13px; border-radius:7px; color:#fff; background:#0a66c2; box-shadow:0 7px 16px #0a66c22e; font-size:12px; font-weight:800; line-height:1; transition:transform .2s ease,background .2s ease,box-shadow .2s ease; }
+.footer-inner .linkedin-link svg { width:17px; height:17px; flex:0 0 auto; fill:currentColor; }
+.footer-inner .linkedin-link b { font-size:13px; line-height:1; }
+.footer-inner .linkedin-link:hover { color:#fff; background:#004f99; box-shadow:0 10px 21px #0a66c23b; transform:translateY(-2px); }
+@media(max-width:620px) { .footer-inner .linkedin-link { justify-content:center; } }
+
 /* Keep section landings and vertical rhythm intentional beneath the fixed header. */
 main > section[id] { scroll-margin-top:79px; }
 #services.section { padding:72px 0 84px; }
