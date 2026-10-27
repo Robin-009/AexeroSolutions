@@ -9,7 +9,10 @@ import './AexeroWorkshopReveal.css'
 import './AexeroMsme.css'
 import './AexeroWorkshopStats.css'
 import './AexeroCapabilities.css'
+import './AexeroBrandLockups.css'
+import './AexeroMotionRefinement.css'
 import MsmeRegistrationMark from './MsmeRegistrationMark'
+import AexeroWordmark from './AexeroWordmark'
 
 const outcomes = [
   ['Single-board AI workflows', 'Understand how device, camera, model and interface fit into one practical system.'],
@@ -54,7 +57,7 @@ export default function AexeroWorkshop() {
   }, [])
 
   return <div className={`axw-page ${ready ? 'axw-ready' : ''}`}>
-    <header className="axw-header"><div className="axw-brand-area"><a href="/" className="axw-brand"><span>A</span>AEXERO <small>ACADEMY</small></a><a href="/" className="axw-home-link">← Aexero Solutions</a></div><nav><a href="#program">Curriculum</a><a href="#branches">Every branch</a><a href="#campuses">Where we&apos;ve taught</a><a href="#faq">Questions</a></nav><a href="#enquire" className="axw-button">Reserve a seat</a></header>
+    <header className="axw-header"><div className="axw-brand-area"><AexeroWordmark href="/" label="Academy" className="axw-brand" /><a href="/" className="axw-home-link">← Aexero Solutions</a></div><nav><a href="#program">Curriculum</a><a href="#branches">Every branch</a><a href="#campuses">Where we&apos;ve taught</a><a href="#faq">Questions</a></nav><a href="#enquire" className="axw-button">Reserve a seat</a></header>
     <main>
       <section className="axw-hero"><div className="axw-glow orange" /><div className="axw-glow blue" /><div className="axw-wrap"><p className="axw-kicker">AEXERO ACADEMY / HANDS-ON EDGE AI WORKSHOP</p><h1>AI that runs <em>on the device</em>, not the cloud.</h1><p className="axw-lede">Cloud inference is easy to demo and expensive to scale. Edge AI is the other path: running real-time vision pipelines, local Small Language Models and Vision-Language Models directly on edge GPU hardware. Over two days, participants optimise models, deploy local GenAI and assemble a complete Multimodal Edge Assistant.</p><div className="axw-actions"><a className="axw-button" href="#enquire">Reserve a seat ↗</a><a className="axw-link" href="#program">▣ See the curriculum</a></div><div className="axw-hero-stats"><article><b>02</b><span>days of hands-on learning</span></article><article><b>13</b><span>guided workshop hours</span></article><article><b>02</b><span>campuses taught so far</span></article></div></div></section>
 
@@ -78,6 +81,6 @@ export default function AexeroWorkshop() {
 
       <section className="axw-cta" id="enquire"><div className="axw-wrap"><h2>Bring Edge AI to your campus or team.</h2><p>Tell us about your audience and we will help you shape the right workshop format.</p><a className="axw-button" href="mailto:info@aexerosolutions.in?subject=Edge%20AI%20workshop%20enquiry">Start an enquiry ↗</a></div></section>
     </main>
-    <footer className="axw-footer"><a href="/" className="axw-brand"><span>A</span>AEXERO <small>SOLUTIONS</small></a><p>Software, AI and digital product delivery.</p><MsmeRegistrationMark /><small>© 2026 Aexero Solutions</small></footer>
+    <footer className="axw-footer"><AexeroWordmark href="/" label="Solutions" className="axw-brand" /><p>Software, AI and digital product delivery.</p><MsmeRegistrationMark /><small>© 2026 Aexero Solutions</small></footer>
   </div>
 }

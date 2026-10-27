@@ -5,12 +5,15 @@ import './AexeroOverrides.css'
 import './AexeroEmail.css'
 import './AexeroMsme.css'
 import './AexeroStack.css'
+import './AexeroBrandLockups.css'
+import './AexeroMotionRefinement.css'
 import MsmeRegistrationMark from './MsmeRegistrationMark'
+import AexeroWordmark from './AexeroWordmark'
 
 const services = [
   ['AI systems & automation', 'Practical AI workflows and intelligent systems that take repetitive work off your team.', ['Agents', 'Automation', 'Workflows']],
   ['Digital products', 'Useful web platforms, portals and internal tools built around real customer and business needs.', ['SaaS', 'Portals', 'Platforms']],
-  ['Web & app development', 'Fast, accessible websites and applications with a solid production foundation.', ['Web', 'Mobile', 'Commerce']],
+  ['Web, mobile & business systems', 'Fast, accessible websites, mobile apps and tailored ERP, CRM and LMS platforms built around how your team actually works.', ['Web', 'Mobile', 'ERP', 'CRM', 'LMS']],
   ['Product strategy', 'Clear product direction, technical planning and a delivery path your team can act on.', ['Strategy', 'Architecture', 'Roadmaps']],
   ['Data & integrations', 'Connected systems, dashboards and APIs that keep information moving where it is useful.', ['APIs', 'Dashboards', 'Cloud']],
   ['Technical partnership', 'Senior design and engineering support for teams ready to move a product forward.', ['Discovery', 'Build', 'Improve']],
@@ -31,7 +34,7 @@ const stack = [
 ]
 
 function Brand() {
-  return <a href="#top" className="vx-brand" aria-label="Aexero Solutions home">Aexero<span>.</span></a>
+  return <AexeroWordmark href="#top" label="Solutions" className="vx-brand" />
 }
 
 export default function AexeroVerikon() {
