@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import './App.css'
+import AexeroVerikon from './AexeroVerikon'
+import AexeroWorkshop from './AexeroWorkshop'
 
 const plans = [
   { name: 'Starter', price: '14,900', note: 'For a focused first impression', description: 'A polished, conversion-ready website for new businesses and independent professionals.', features: ['Up to 5 core pages', 'Responsive design system', 'Contact and enquiry setup', 'Basic SEO foundations', '30 days launch support'] },
@@ -29,6 +31,9 @@ function Mark() {
 }
 
 function App() {
+  if (window.location.pathname === '/workshop') return <AexeroWorkshop />
+  return <AexeroVerikon />
+
   const [menuOpen, setMenuOpen] = useState(false)
   const [selectedPlan, setSelectedPlan] = useState(null)
   const [sent, setSent] = useState(false)
@@ -49,7 +54,7 @@ function App() {
 
       <section id="process" className="section process"><div className="wrap process-grid"><div><p className="eyebrow">HOW WE WORK</p><h2>Less theatre. More forward motion.</h2><p className="lede">We keep the process close, practical and visible—so you always know what we are making, why it matters, and what happens next.</p><a className="button button-dark" href="#contact">Meet the team <b>→</b></a></div><ol>{[['Listen well', 'We get close to your commercial goals, customers and constraints.'], ['Create direction', 'We map the product, content and technology decisions before we build.'], ['Build in the open', 'You see working progress early and often—not just at the finish line.'], ['Launch with care', 'We test, optimise and hand over a platform your team can confidently use.']].map(([title, text], index) => <li key={title}><span>0{index + 1}</span><div><h3>{title}</h3><p>{text}</p></div></li>)}</ol></div></section>
 
-      <section id="contact" className="contact"><div className="wrap contact-grid"><div><p className="eyebrow">START A CONVERSATION</p><h2>Have something meaningful to build?</h2><p>Tell us a little about it. We will respond within two working days with the right next step—not a generic sales sequence.</p><div className="contact-details"><a href="mailto:hello@aexero.com">hello@aexero.com</a><span>Remote-first / available worldwide</span></div></div><div className="contact-form">{sent ? <div className="sent"><i>✓</i><h3>We’ve got it.</h3><p>Thanks for the detail. We will be in touch shortly.</p><button className="text-link" onClick={() => setSent(false)}>Send another enquiry →</button></div> : <form onSubmit={(event) => { event.preventDefault(); setSent(true) }}><label>Your name<input required placeholder="Name" /></label><label>Work email<input type="email" required placeholder="you@company.com" /></label><label>What are you looking to build?<select defaultValue="A website"><option>A website</option><option>A digital product or portal</option><option>An AI-enabled feature</option><option>Something else</option></select></label><label>A little context<textarea required rows="4" placeholder="What are you trying to achieve?" /></label><button className="button button-dark">Send enquiry <b>→</b></button></form>}</div></div></section>
+      <section id="contact" className="contact"><div className="wrap contact-grid"><div><p className="eyebrow">START A CONVERSATION</p><h2>Have something meaningful to build?</h2><p>Tell us a little about it. We will respond within two working days with the right next step—not a generic sales sequence.</p><div className="contact-details"><a href="mailto:info@aexerosolutions.in">info@aexerosolutions.in</a><span>Remote-first / available worldwide</span></div></div><div className="contact-form">{sent ? <div className="sent"><i>✓</i><h3>We’ve got it.</h3><p>Thanks for the detail. We will be in touch shortly.</p><button className="text-link" onClick={() => setSent(false)}>Send another enquiry →</button></div> : <form onSubmit={(event) => { event.preventDefault(); setSent(true) }}><label>Your name<input required placeholder="Name" /></label><label>Work email<input type="email" required placeholder="you@company.com" /></label><label>What are you looking to build?<select defaultValue="A website"><option>A website</option><option>A digital product or portal</option><option>An AI-enabled feature</option><option>Something else</option></select></label><label>A little context<textarea required rows="4" placeholder="What are you trying to achieve?" /></label><button className="button button-dark">Send enquiry <b>→</b></button></form>}</div></div></section>
     </main>
 
     <footer><div className="wrap footer-inner"><Mark /><span>© 2026 Aexero. Built with intention.</span><div><a className="linkedin-link" href="https://www.linkedin.com/company/144002723" target="_blank" rel="noreferrer" aria-label="Follow Aexero on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.12 3A2.12 2.12 0 1 1 5.1 7.24 2.12 2.12 0 0 1 5.12 3ZM3.28 8.93h3.68V20.7H3.28V8.93Zm5.99 0h3.53v1.61h.05c.49-.93 1.7-1.91 3.5-1.91 3.75 0 4.44 2.47 4.44 5.68v6.39h-3.68v-5.66c0-1.35-.02-3.09-1.88-3.09-1.89 0-2.18 1.47-2.18 2.99v5.76H9.27V8.93Z" /></svg><span>Follow us on LinkedIn</span><b>↗</b></a></div></div></footer>
